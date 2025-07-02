@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Give Feedback</h1>
+    <form method="post">
+        <label>Name: <input type="text" name="name" required></label><br><br>
+        <label>Feedback: <textarea name="feedback" required></textarea></label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+    <h2>All Feedbacks:</h2>
+    <ul>
+        {% for name, fb in feedbacks %}
+            <li><strong>{{ name }}</strong>: {{ fb }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
